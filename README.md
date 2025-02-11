@@ -91,7 +91,7 @@ g++ mutex.cpp -o mutex -lpthread
 # Enter strings as input, press Ctrl+D when done
 ```
 
-## 🎓 Educational Resources
+## 🎓 High Level Concepts
 
 ### Key Concepts Explained
 
@@ -121,29 +121,3 @@ Each component demonstrates:
 - Error handling
 - Resource management
 - Performance optimization
-
-## 📊 Performance Considerations
-
-- Thread creation and management overhead
-- Network latency handling
-- Mutex locking patterns
-- Resource utilization
-- Scalability factors
-
-## 🤝 Contributing
-
-Feel free to contribute to this project by:
-1. Forking the repository
-2. Creating a feature branch
-3. Making your changes
-4. Submitting a pull request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## ✨ Acknowledgments
-
-- [POSIX Threads Programming](https://computing.llnl.gov/tutorials/pthreads/)
-- [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/)
-- Operating Systems course materials and instructors
