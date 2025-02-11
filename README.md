@@ -91,9 +91,7 @@ g++ mutex.cpp -o mutex -lpthread
 # Enter strings as input, press Ctrl+D when done
 ```
 
-## 🎓 High Level Concepts
-
-### Key Concepts Explained
+## Key Concepts Explained
 
 1. **Multithreading**
    - Parallel execution of tasks
