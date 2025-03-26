@@ -6,7 +6,7 @@ A **C++** project demonstrating core operating systems concepts—**multithreadi
 1. [Overview](#overview)  
 2. [Features](#features)  
 3. [Key Implementation Details](#key-implementation-details)  
-
+4. [Usage Examples](#usage-examples)
 ---
 
 ## 1. Overview
@@ -45,7 +45,7 @@ This project focuses on **Shannon encoding**, a technique that constructs unique
 
 ---
 
-## 6. Key Implementation Details
+## 3. Key Implementation Details
 
 ### Shannon Encoding
 - Counts symbol frequencies for each input line
@@ -64,6 +64,94 @@ This project focuses on **Shannon encoding**, a technique that constructs unique
 - The mutex example (`mutex.cpp`) demonstrates how threads can synchronize their output to avoid interleaving, ensuring results are printed in order
 
 ---
+## 4. Usage Examples
+
+Below are examples of how to use each component of the system.
+
+### 1. Multithreaded Processing (multiThreading.cpp)
+
+This component processes multiple strings in parallel using threads:
+
+```bash
+# Compile
+g++ -o mt_shannon src/threading/multiThreading.cpp -pthread
+
+# Run (input from terminal)
+./mt_shannon
+```
+
+Enter messages, one per line (press Ctrl+D when done):
+```
+Hello World
+Operating Systems
+Parallel Computing
+```
+
+The program will:
+- Create a separate thread for each input line
+- Calculate Shannon codes for each message independently
+- Display results with character frequencies and codes
+- Show encoded binary output
+
+### 2. Synchronized Processing (mutex.cpp)
+
+This component ensures synchronized output between threads:
+
+```bash
+# Compile
+g++ -o sync_shannon src/sync/mutex.cpp -pthread
+
+# Run (input from terminal)
+./sync_shannon
+```
+
+Enter messages as before:
+```
+First Message
+Second Message
+Third Message
+```
+
+The program will:
+- Process messages in parallel but display results sequentially
+- Use mutexes to prevent output interleaving
+- Show thread coordination in action
+- Demonstrate proper resource sharing
+
+### 3. Client-Server Implementation (client.cpp / server.cpp)
+
+This component provides Shannon encoding as a network service:
+
+```bash
+# Compile server and client
+g++ -o shannon_server src/network/server.cpp -pthread
+g++ -o shannon_client src/network/client.cpp -pthread
+
+# Start server (in one terminal)
+./shannon_server 8080
+
+# Run client (in another terminal)
+./shannon_client localhost 8080
+```
+
+Enter messages in the client terminal:
+```
+Network Message
+Distributed Computing
+Client Server Model
+```
+
+The system will:
+- Server: Accept multiple client connections simultaneously using forking
+- Client: Send each message to server for processing
+- Server: Calculate Shannon codes and return results
+- Client: Display received encoding results
+
+Key Features:
+- Server handles multiple clients concurrently
+- Client supports multiple messages in parallel
+- Robust error handling and resource cleanup
+- Network-transparent encoding service
 
 ## Appendix: Sample Outputs
 
