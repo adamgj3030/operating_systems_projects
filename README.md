@@ -3,10 +3,10 @@
 A **C++** project demonstrating core operating systems concepts—**multithreading**, **synchronization**, and **client-server communication**—through the lens of **Shannon encoding**. The repository showcases how to apply OS fundamentals in real-world scenarios, including process forking, mutex-based resource protection, and network-based data exchange.
 
 ## Table of Contents
-1. [Overview](#overview)  
-2. [Features](#features)  
-3. [Key Implementation Details](#key-implementation-details)  
-4. [Usage Examples](#usage-examples)
+1. [Overview](#1-overview)  
+2. [Features](#2-features)  
+3. [Key Implementation Details](#3-key-implementation-details)  
+4. [Usage Examples](#4-usage-examples)
 ---
 
 ## 1. Overview
